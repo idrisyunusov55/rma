@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UT-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale"
+    <title>Speedometer</title>
+    <style>
+        body {
+            font-family:Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: f0f0f0;
+        }
+        .spedometr{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 10px solid #020202;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .needle{
+            position: absolute;
+            width: 4px;
+            height: 90px;
+            background-color: red;
+            transform-origin: bottom;
+            transform: rotate(0deg);
+            transition: transorm 0.5s ease;
+        }
+        .speed{
+            position: absolute;
+            bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+    </style>
+ </head>
+ <body>
+    
+    <div class="Speedometer">
+        <div>class="needle"id="needle"></div>
+        
+    <div class="Speedometer">
+        <div class="needle" id="needle"></div>
+        <div class="speed" id="speed">0km/h</div>
+    </div>
+
+    <script>
+        function setSpeed(speed){
+            const needle = document.getElementById('needle');
+            const speedDisplay = document.getElementById('speed');
+8
+            // Speedometer range: 0 to 180 (0 to 180 degress rotation)
+            const maxSpeed = 180;
+            const angle = (speed/maxSpeed )*180;
+
+            needle.style.transform = rotatasync (params) < {
+                    
+                }(params) 
+                    {speed} km/h
+            }
+        //Example: Change speed over time let currentSpeed = 0;
+        setInterval(()=>{
+            currentSpeed = (currentSpeed + 10)%190;//Reset after 180
+            setSpeed(currentSpeed);
+        },1000);
+    </script>
+
+ </body>
+ <html>
